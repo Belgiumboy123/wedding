@@ -1,1 +1,258 @@
-<h1> Hello! </h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    
+    <!-- Link to google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+
+    <style>
+      body {
+        padding-top: 70px;
+        background-color: #FFFFFF;
+        overflow-x:hidden;
+        color: #666666;
+      }
+
+      @media screen and (max-width: 330px) {
+        h1 {
+            font-size: 2.0rem;
+        }
+
+        #clockdiv {
+            font-size: 0.75rem;
+        }
+      }
+
+      .section {
+          background-color: #CFEDED;
+          padding-bottom: 100px;
+      }
+
+      .navbar-custom {
+        background: #0736A4 !important;
+        padding: 10px;
+      }
+
+      .navbar-custom .navbar-nav li a {
+          color: #FFFFFF;
+          border-radius: 10px;
+          border: 1px solid #0736A4 !important;
+      }
+
+      .navbar-custom .navbar-nav li a:hover {
+          color: #CFEDED;
+      }
+
+      .navbar-custom .navbar-nav li a:focus,
+      .navbar-custom .navbar-nav li a:active {
+          color: #666666;
+      }
+
+      .navbar-custom .navbar-nav li.active a {
+          color: #666666;
+          background: #CFEDED;
+          border: 1px solid #CFEDED;
+      }
+
+      .navbar-custom .navbar-nav li.active a:hover,
+      .navbar-custom .navbar-nav li.active a:focus,
+      .navbar-custom .navbar-nav li.active a:active {
+          color: #666666;
+          background: #CFEDED;
+          border: 1px solid #CFEDED;
+      }
+
+       .navbar-header button {
+          border: 2px solid #000000;
+      }
+
+      #datetabheader{
+          color: white;
+          cursor: pointer;
+          font-family: 'Pacifico', cursive;
+          font-size: 24px;
+          font-style: normal;
+          font-variant: normal;
+          line-height: 23px;
+      }
+
+      #clockdiv{
+          color: inherit;
+          font-weight: 100;
+          text-align: center;
+          margin-top: 10px;
+          
+          display: inline-block;
+          border-radius: 3px;
+      }
+
+      #clockdiv > div{
+          display: inline-block;
+          padding: 10px;
+          background: inherit;
+      }
+
+      #clockdiv div > span{
+          font-weight: 500;
+          display: inline-block;
+          background: inherit;
+          font-size: 18px;
+      }
+    </style>
+
+  </head>
+  <body style="height:100vh">
+    <!-- fixed top navbar-->
+    <nav class="navbar navbar-toggleable-md navbar-custom navbar-inverse bg-inverse fixed-top">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#mainNavBar" aria-controls="mainNavBar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a id="datetabheader" class="navbar-brand" href="#" onclick="onDateHeaderClick()">Jillian & Brecht</a>
+  
+        <div class="collapse navbar-collapse" id="mainNavBar">
+          <ul class="navbar-nav w-100 justify-content-end">
+            <li class="nav-item">
+              <a id="datetab" class="nav-link" data-toggle="tab" role="tab" href="#date">Save the Date</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" role="tab" href="#about">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" role="tab" href="#travel">Travel</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" role="tab" href="#events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" role="tab" href="#registry">Registry</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" data-toggle="tab" role="tab" href="#rsvp">RSVP</a>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <div class="tab-content">
+        <div class="tab-pane" id="date" role="tabpanel">
+            <div class="container">
+                        <h1 class="col-lg-12 text-center">August 11th 2018</h1>
+                        <div class="col-lg-12 text-center" id="clockdiv">
+                            <div>
+                                <span class="days"></span>
+                                <div>Days</div>
+                            </div>
+                            <div>
+                                <span class="hours"></span>
+                                <div>Hours</div>
+                            </div>
+                            <div>
+                                <span class="minutes"></span>
+                                <div>Minutes</div>
+                            </div>
+                            <div>
+                                <span class="seconds"></span>
+                                <div>Seconds</div>
+                            </div>
+                        </div>
+                        <div class="text-center mainpic">
+                          <img src="pictures\i3.jpg" class="img-fluid rounded" style="max-width: 100%;height: auto;">
+                        </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="about" role="tabpanel">
+            <div class="container">
+                <h1>about</h1>
+            </div>
+        </div>
+        <div class="tab-pane" id="travel" role="tabpanel">
+            <div class="container">
+                <h1>travel</h1>
+            </div>
+        </div>
+        <div class="tab-pane" id="events" role="tabpanel">
+            <div class="container">
+                <h1>events</h1>
+            </div>
+        </div>
+        <div class="tab-pane" id="registry" role="tabpanel">
+            <div class="container">
+                <h1>registry</h1>
+            </div>
+        </div>
+        <div class="tab-pane" id="rsvp" role="tabpanel">
+            <div class="container">
+                <h1>rsvp</h1>
+            </div>
+        </div>
+    </div>
+    
+     <!-- jQuery first, then Tether, then Bootstrap JS. -->
+     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script> 
+     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.15.0/jquery.validate.min.js"></script>
+     <script>
+        // This hides the collapsible nav bar button list.
+        $('.navbar-nav>li>a').on('click', function(){
+          $('.navbar-collapse').collapse('hide');
+        });
+
+        function onDateHeaderClick(){
+            $('.navbar-collapse').collapse('hide');
+            $('#datetab').tab('show');
+        }
+
+        function getTimeRemaining() {
+          var t = Date.parse("August 11, 2018") - Date.parse(new Date());
+          var seconds = Math.floor((t / 1000) % 60);
+          var minutes = Math.floor((t / 1000 / 60) % 60);
+          var hours = Math.floor((t / (1000 * 60 * 60)) % 24);
+          var days = Math.floor(t / (1000 * 60 * 60 * 24));
+          return {
+            'total': t,
+            'days': days,
+            'hours': hours,
+            'minutes': minutes,
+            'seconds': seconds
+          };
+        }
+
+        function initializeClock(id) {
+          var clock = document.getElementById(id);
+          var daysSpan = clock.querySelector('.days');
+          var hoursSpan = clock.querySelector('.hours');
+          var minutesSpan = clock.querySelector('.minutes');
+          var secondsSpan = clock.querySelector('.seconds');
+
+          function updateClock() {
+            var t = getTimeRemaining();
+
+            daysSpan.innerHTML = t.days;
+            hoursSpan.innerHTML = ('0' + t.hours).slice(-2);
+            minutesSpan.innerHTML = ('0' + t.minutes).slice(-2);
+            secondsSpan.innerHTML = ('0' + t.seconds).slice(-2);
+
+            if (t.total <= 0) {
+              clearInterval(timeinterval);
+              alert("time is up");
+            }
+          }
+
+          updateClock();
+          var timeinterval = setInterval(updateClock, 1000);
+        }
+
+        $(document).ready(function(){
+            $('#datetab').tab('show');
+            initializeClock('clockdiv');
+        });
+    </script>
+    </body>
+</html>
